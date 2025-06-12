@@ -94,6 +94,21 @@ This project automates the process of reading specific emails from Gmail, downlo
 
 ---
 
+##Error Handlings
+| Requirementa                                      | Status ✅ |
+| ------------------------------------------------ | -------- |
+| Skip emails with no attachments                  | ✅        |
+| Skip unsupported file types                      | ✅        |
+| Handle Drive or Sheet access errors              | ✅        |
+| Log extraction failures and continue             | ✅        |
+| Avoid crashing if no matching emails are found   | ✅        |
+| Default to `'N/A'` if info missing               | ✅        |
+| Extract final amount based on “Total/Net Amount” | ✅        |
+| Save file with formatted name                    | ✅        |
+| Log everything in Google Sheet                   | ✅        |
+| Label and mark emails as read                    | ✅        |
+
+
 ## 🙌 Acknowledgements
 
 Built as a task for a startup interview. Thanks to [Viable] and team for the sample data.
