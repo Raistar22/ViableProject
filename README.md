@@ -83,7 +83,8 @@ This project automates the process of reading specific emails from Gmail, downlo
 > 📊 Google Sheet Sample Entry  
 > 📜 Email Body Sample  
 
-*(Optional - add screenshots here to make it more visual)*
+![image](https://github.com/user-attachments/assets/f2b78547-ed94-4a94-9dbf-23b4a3b230da)
+
 
 ---
 
