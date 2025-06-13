@@ -90,6 +90,35 @@ This project automates the process of reading specific emails from Gmail, downlo
 ![image](https://github.com/user-attachments/assets/a21c714a-247a-486f-af37-11ae0e1425a7)
 
 
+Sure! Here's a natural-sounding section you can add to your README under the title **"🔍 How Google Vision API Is Used"**, in your tone and writing style:
+
+---
+
+## 🔍 How Google Vision API Is Used
+
+So in this project, I used Google Cloud Vision API to extract text from attachments like invoices that come in as images or PDFs.
+
+Here’s how it works behind the scenes:
+
+* First, the script checks if the attachment is a valid file type (`pdf`, `jpg`, `jpeg`, `png`). If it’s not, we skip it.
+* If it's valid, we convert the attachment into a Base64 string using Apps Script’s built-in utilities. This is necessary because the Vision API needs the image in Base64 format.
+* Once the image is ready, we send it to the Vision API endpoint using a `POST` request. The API responds with the full extracted text (OCR).
+* I then merge this OCR text with the email body and run regex patterns over it to pull out specific info like:
+
+  * Invoice Date (e.g., `03.06.2025`)
+  * Invoice Number (e.g., `INV12345`)
+  * Amount (e.g., `₹ 40,000`)
+  * Vendor Name (if found)
+
+This is super useful because sometimes the email doesn’t contain all the metadata in the body — it’s only on the invoice image. So OCR ensures we still get the needed details even if the email text is empty or missing parts.
+
+All this is handled inside a function called `extractTextFromImageBase64()`, and it runs automatically for every supported attachment.
+
+If OCR fails or doesn't return any text, I log the error and move on without breaking the whole process.
+
+
+
+
 
 
 ---
